@@ -5,7 +5,7 @@ import { FooterWrapper } from "./style";
 export function Footer() {
   return (
     <FooterWrapper >
-      <h2>Produzido por Júllia</h2>
+      <h2>Allways By Rafel</h2>
     </FooterWrapper>
   );
 }

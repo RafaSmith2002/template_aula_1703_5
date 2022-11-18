@@ -1,18 +1,28 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import { WrapperPhoto } from './style';
 
 export default function Post() {
 const [titulo, setTitulo] = useState("titulo");  
+const [photo, setPhoto] = useState("");
+const [seeData, setSeeData] = useState(false);
 
   return (
     <div>
-      <h1>Clika nu</h1>
-      <span>{titulo}</span>
+
+      {seeData && ( 
+        <WrapperPhoto>
+          <span>{titulo}</span>
+          <img src={photo} alt="imagem_upload" />
+        </WrapperPhoto>     
+      )}
+
       <input onChange={(e) => setTitulo(e.target.value)} />
-      <input />  
-      <button> Butaumm </button>
+      <input onChange={(e) => setPhoto(e.target.value)} />
+
+      <button onClick={() => setSeeData(!seeData)}>
+        {seeData ? "DELETE" : "ENVIAR"}
+      </button>
     </div>
   );
 }
-
-// arrow function
-// const Post = () => {};

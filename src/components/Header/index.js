@@ -2,15 +2,10 @@
 import React from "react";
 import { WrapperHeader } from './style';
 
-const Header = ({ logo, menu }) => {
+const Header = (props) => {
   return (
     <WrapperHeader>
-      <img src={logo} />
-      <div>
-        <button>{menu[0]}</button>
-        <button>{menu[1]}</button>
-        <button>{menu[2]}</button>
-      </div>
+      <img src={props.logo} alt="" />     
     </WrapperHeader>
   );
 };
